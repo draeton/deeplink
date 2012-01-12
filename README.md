@@ -1,14 +1,14 @@
 ## deeplink
 
 [deeplink](http://draeton.github.com/deeplink/) is a small utility for working with deeplinks.
-The current version is `0.1.8`. Documentation is available
+The current version is `0.1.9`. Documentation is available
 [here](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html).
 
 
 ## Implementation
 
     <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/deeplink-0.1.8-min.js"></script>
+    <script src="js/deeplink-0.1.9-min.js"></script>
 
 
 ## Usage
