@@ -1,6 +1,6 @@
-## deeplink
+## Deeplink
 
-[deeplink](http://draeton.github.com/deeplink/) is a small utility for working with deeplinks.
+[Deeplink](http://draeton.github.com/deeplink/) is a small utility for working with deeplinks.
 The current version is `@VERSION@`. Documentation is available
 [here](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html).
 
