@@ -3,7 +3,7 @@
 // [http://draeton.github.com/deeplink](http://draeton.github.com/deeplink)
 //
 // Copyright 2012, Matthew Cobbs
-// Licensed under the MIT license.
+// MIT licensed
 //
 /*global jQuery*/
 var Deeplink = (function (window, $) {
