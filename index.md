@@ -7,11 +7,12 @@ title: Deeplink - Easy-peasy deeplinking manager
 
 [Deeplink](http://github.com/draeton/deeplink/) is a small utility for working with deeplinks.
 
+
 ## Implementation
 
 {% highlight html %}
 <script src="js/jquery-1.7.1.min.js"></script>
-<script src="js/deeplink-0.1.2-min.js"></script>
+<script src="js/deeplink-${build.major}.${build.minor}.1-min.js"></script>
 {% endhighlight %}
 
 Documentation is available [here.](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html)
@@ -86,7 +87,7 @@ jQuery 1.7+
 
 ## Download
 
-The latest release, **0.1.2 is [available here](http://draeton.github.com/deeplink/deeplink/dist/deeplink-0.1.2.zip).**
+The latest release, **${build.major}.${build.minor}.1 is [available here](http://draeton.github.com/deeplink/deeplink/dist/deeplink-${build.major}.${build.minor}.1.zip).**
 
 You can download this project in either [zip](https://github.com/draeton/deeplink/zipball/master)
 or [tar](https://github.com/draeton/deeplink/tarball/master) formats.
