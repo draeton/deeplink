@@ -14,7 +14,7 @@ var Deeplink = (function (window, $) {
 
     var monitorDelay = 250;
 
-    // hashchange monitoring for older browsers
+    // **hashchange monitoring for older browsers**
     var monitorHash = function () {
         var oldURL;
         var newURL;
@@ -30,22 +30,22 @@ var Deeplink = (function (window, $) {
         monitor();
     };
 
+    // Start monitoring in browsers without window.onhashchange
     if (!("onhashchange" in window)) {
         monitorHash();
     }
 
-    // public interface
+    // ## public interface
     var methods = {
-        /**
-         * Should hashchange events fire on message bus
-         */
+        // Should hashchange events fire on message bus
         triggering: true,
 
-        /**
-         * init
-         * Bind hashchange event and set up monitoring for older browsers
-         */
-        init: function (eq, sep) {
+        // ### init
+        //
+        // Bind hashchange event and set up monitoring for older browsers
+        //     @param {String} eq Equality value in string
+        //     @param {String} sep Separator value in string
+        init: function (/* optional */ eq, sep) {
             this.eq = eq || "=";
             this.sep = sep || "&";
 
@@ -53,11 +53,10 @@ var Deeplink = (function (window, $) {
             $(window).trigger("hashchange");
         },
 
-        /**
-         * parse
-         * Parse a string into a map of key-value pairs
-         * @param {String} hash
-         */
+        // ### parse
+        //
+        // Parse a string into a map of key-value pairs
+        //     @param {String} hash
         parse: function (hash) {
             var list, map, i, l, pair;
 
@@ -72,11 +71,10 @@ var Deeplink = (function (window, $) {
             return map;
         },
 
-        /**
-         * stringify
-         * Parse a map of key-value pairs into a string
-         * @param {Object} map
-         */
+        // ### stringify
+        //
+        // Parse a map of key-value pairs into a string
+        //     @param {Object} map
         stringify: function (map) {
             var hash, i;
 
@@ -94,11 +92,10 @@ var Deeplink = (function (window, $) {
             return hash.replace(new RegExp("^\\" + this.sep), "");
         },
 
-        /**
-         * hashchange
-         * The event handler. Parses the current hash into a map and
-         * trigger a deeplink event on the Deeplink instance
-         */
+        // ### hashchange
+        //
+        // The event handler. Parses the current hash into a map and
+        // trigger a deeplink event on the Deeplink instance
         hashchange: function () {
             var hash, map;
 
@@ -114,13 +111,12 @@ var Deeplink = (function (window, $) {
             this.triggering = true;
         },
 
-        /**
-         * hashupdate
-         * Used to update the current hash with values from a map object
-         * @param {Object} map
-         * @param {Boolean} replace Should we replace all hash parameters
-         * @param {Boolean} fire Should we trigger the hashchange event
-         */
+        // ### hashupdate
+        //
+        // Used to update the current hash with values from a map object
+        //     @param {Object} map
+        //     @param {Boolean} replace Should we replace all hash parameters
+        //     @param {Boolean} fire Should we trigger the hashchange event
         hashupdate: function (map, replace, fire) {
             var hash, current;
 
@@ -136,23 +132,22 @@ var Deeplink = (function (window, $) {
         }
     };
 
-    // constructor and prototype
-    var Deeplink = function () {
+    // **constructor and prototype**
+    var Deeplink = function (/* optional */ eq, sep) {
         this.init.apply(this, arguments);
     }
 
     Deeplink.prototype = methods;
 
-    /**
-     * setDelay
-     * Set the monitorDelay for monitorHash
-     * @param {Number} ms In milliseconds
-     */
+    // ### setDelay
+    //
+    // Set the monitorDelay for monitorHash
+    //     @param {Number} ms In milliseconds
     Deeplink.setDelay = function (ms) {
         monitorDelay = ms;
     };
 
-    // return a reference to the constructor
+    // **return a reference to the constructor**
     return Deeplink;
 
 }(this, jQuery));

@@ -23,7 +23,7 @@
     </target>
 
 
-    <!-- * build    * -->
+    <!-- * build * -->
     <target name="prod"
         description="Builds project files for production use"
         depends="
