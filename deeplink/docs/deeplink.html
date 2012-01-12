@@ -40,9 +40,11 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
 
 </pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <h3>init</h3>
 
-<p>Bind hashchange event and set up monitoring for older browsers
-    @param {String} eq Equality value in string
-    @param {String} sep Separator value in string</p>             </td>             <td class="code">               <div class="highlight"><pre>
+<p>Bind hashchange event and set up monitoring for older browsers</p>
+
+<pre><code>@param {String} eq Equality value in string
+@param {String} sep Separator value in string
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="cm">/* optional */</span> <span class="nx">eq</span><span class="p">,</span> <span class="nx">sep</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">eq</span> <span class="o">=</span> <span class="nx">eq</span> <span class="o">||</span> <span class="s2">&quot;=&quot;</span><span class="p">;</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">sep</span> <span class="o">=</span> <span class="nx">sep</span> <span class="o">||</span> <span class="s2">&quot;&amp;&quot;</span><span class="p">;</span>
@@ -53,8 +55,10 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
 
 </pre></div>             </td>           </tr>                               <tr id="section-7">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-7">&#182;</a>               </div>               <h3>parse</h3>
 
-<p>Parse a string into a map of key-value pairs
-    @param {String} hash</p>             </td>             <td class="code">               <div class="highlight"><pre>
+<p>Parse a string into a map of key-value pairs</p>
+
+<pre><code>@param {String} hash
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">list</span><span class="p">,</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">l</span><span class="p">,</span> <span class="nx">pair</span><span class="p">;</span>
 
@@ -71,8 +75,10 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
 
 </pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <h3>stringify</h3>
 
-<p>Parse a map of key-value pairs into a string
-    @param {Object} map</p>             </td>             <td class="code">               <div class="highlight"><pre>
+<p>Parse a map of key-value pairs into a string</p>
+
+<pre><code>@param {Object} map
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">stringify</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">map</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">hash</span><span class="p">,</span> <span class="nx">i</span><span class="p">;</span>
 
@@ -111,10 +117,12 @@ trigger a deeplink event on the Deeplink instance</p>             </td>         
 
 </pre></div>             </td>           </tr>                               <tr id="section-10">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-10">&#182;</a>               </div>               <h3>hashupdate</h3>
 
-<p>Used to update the current hash with values from a map object
-    @param {Object} map
-    @param {Boolean} replace Should we replace all hash parameters
-    @param {Boolean} fire Should we trigger the hashchange event</p>             </td>             <td class="code">               <div class="highlight"><pre>
+<p>Used to update the current hash with values from a map object</p>
+
+<pre><code>@param {Object} map
+@param {Boolean} replace Should we replace all hash parameters
+@param {Boolean} fire Should we trigger the hashchange event
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">hashupdate</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">map</span><span class="p">,</span> <span class="nx">replace</span><span class="p">,</span> <span class="nx">fire</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">hash</span><span class="p">,</span> <span class="nx">current</span><span class="p">;</span>
 
@@ -139,8 +147,10 @@ trigger a deeplink event on the Deeplink instance</p>             </td>         
 
 </pre></div>             </td>           </tr>                               <tr id="section-12">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-12">&#182;</a>               </div>               <h3>setDelay</h3>
 
-<p>Set the monitorDelay for monitorHash
-    @param {Number} ms In milliseconds</p>             </td>             <td class="code">               <div class="highlight"><pre>
+<p>Set the monitorDelay for monitorHash</p>
+
+<pre><code>@param {Number} ms In milliseconds
+</code></pre>             </td>             <td class="code">               <div class="highlight"><pre>
     <span class="nx">Deeplink</span><span class="p">.</span><span class="nx">setDelay</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ms</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">monitorDelay</span> <span class="o">=</span> <span class="nx">ms</span><span class="p">;</span>
     <span class="p">};</span>

@@ -43,6 +43,7 @@ var Deeplink = (function (window, $) {
         // ### init
         //
         // Bind hashchange event and set up monitoring for older browsers
+        //
         //     @param {String} eq Equality value in string
         //     @param {String} sep Separator value in string
         init: function (/* optional */ eq, sep) {
@@ -56,6 +57,7 @@ var Deeplink = (function (window, $) {
         // ### parse
         //
         // Parse a string into a map of key-value pairs
+        //
         //     @param {String} hash
         parse: function (hash) {
             var list, map, i, l, pair;
@@ -74,6 +76,7 @@ var Deeplink = (function (window, $) {
         // ### stringify
         //
         // Parse a map of key-value pairs into a string
+        //
         //     @param {Object} map
         stringify: function (map) {
             var hash, i;
@@ -114,6 +117,7 @@ var Deeplink = (function (window, $) {
         // ### hashupdate
         //
         // Used to update the current hash with values from a map object
+        //
         //     @param {Object} map
         //     @param {Boolean} replace Should we replace all hash parameters
         //     @param {Boolean} fire Should we trigger the hashchange event
@@ -142,6 +146,7 @@ var Deeplink = (function (window, $) {
     // ### setDelay
     //
     // Set the monitorDelay for monitorHash
+    //
     //     @param {Number} ms In milliseconds
     Deeplink.setDelay = function (ms) {
         monitorDelay = ms;
