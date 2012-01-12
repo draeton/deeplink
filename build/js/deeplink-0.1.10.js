@@ -143,7 +143,7 @@ var Deeplink = (function (window, $) {
 
     Deeplink.prototype = methods;
 
-    // ### setDelay
+    // ### Deeplink.setDelay
     //
     // Set the monitorDelay for monitorHash
     //
