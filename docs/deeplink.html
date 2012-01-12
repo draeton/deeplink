@@ -12,7 +12,7 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
 
     <span class="kd">var</span> <span class="nx">monitorDelay</span> <span class="o">=</span> <span class="mi">250</span><span class="p">;</span>
 
-</pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <p>hashchange monitoring for older browsers</p>             </td>             <td class="code">               <div class="highlight"><pre>
+</pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <p><strong>hashchange monitoring for older browsers</strong></p>             </td>             <td class="code">               <div class="highlight"><pre>
     <span class="kd">var</span> <span class="nx">monitorHash</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">oldURL</span><span class="p">;</span>
         <span class="kd">var</span> <span class="nx">newURL</span><span class="p">;</span>
@@ -28,22 +28,22 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
         <span class="nx">monitor</span><span class="p">();</span>
     <span class="p">};</span>
 
+</pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <p>Start monitoring in browsers without window.onhashchange</p>             </td>             <td class="code">               <div class="highlight"><pre>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="s2">&quot;onhashchange&quot;</span> <span class="k">in</span> <span class="nb">window</span><span class="p">))</span> <span class="p">{</span>
         <span class="nx">monitorHash</span><span class="p">();</span>
     <span class="p">}</span>
 
-</pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <p>public interface</p>             </td>             <td class="code">               <div class="highlight"><pre>
+</pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <h2>public interface</h2>             </td>             <td class="code">               <div class="highlight"><pre>
     <span class="kd">var</span> <span class="nx">methods</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="cm">/**</span>
-<span class="cm">         * Should hashchange events fire on message bus</span>
-<span class="cm">         */</span>
+</pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>Should hashchange events fire on message bus</p>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">triggering</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
 
-        <span class="cm">/**</span>
-<span class="cm">         * init</span>
-<span class="cm">         * Bind hashchange event and set up monitoring for older browsers</span>
-<span class="cm">         */</span>
-        <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">eq</span><span class="p">,</span> <span class="nx">sep</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <h3>init</h3>
+
+<p>Bind hashchange event and set up monitoring for older browsers
+    @param {String} eq Equality value in string
+    @param {String} sep Separator value in string</p>             </td>             <td class="code">               <div class="highlight"><pre>
+        <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="cm">/* optional */</span> <span class="nx">eq</span><span class="p">,</span> <span class="nx">sep</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">eq</span> <span class="o">=</span> <span class="nx">eq</span> <span class="o">||</span> <span class="s2">&quot;=&quot;</span><span class="p">;</span>
             <span class="k">this</span><span class="p">.</span><span class="nx">sep</span> <span class="o">=</span> <span class="nx">sep</span> <span class="o">||</span> <span class="s2">&quot;&amp;&quot;</span><span class="p">;</span>
 
@@ -51,11 +51,10 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
             <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;hashchange&quot;</span><span class="p">);</span>
         <span class="p">},</span>
 
-        <span class="cm">/**</span>
-<span class="cm">         * parse</span>
-<span class="cm">         * Parse a string into a map of key-value pairs</span>
-<span class="cm">         * @param {String} hash</span>
-<span class="cm">         */</span>
+</pre></div>             </td>           </tr>                               <tr id="section-7">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-7">&#182;</a>               </div>               <h3>parse</h3>
+
+<p>Parse a string into a map of key-value pairs
+    @param {String} hash</p>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">parse</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">list</span><span class="p">,</span> <span class="nx">map</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">l</span><span class="p">,</span> <span class="nx">pair</span><span class="p">;</span>
 
@@ -70,11 +69,10 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
             <span class="k">return</span> <span class="nx">map</span><span class="p">;</span>
         <span class="p">},</span>
 
-        <span class="cm">/**</span>
-<span class="cm">         * stringify</span>
-<span class="cm">         * Parse a map of key-value pairs into a string</span>
-<span class="cm">         * @param {Object} map</span>
-<span class="cm">         */</span>
+</pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <h3>stringify</h3>
+
+<p>Parse a map of key-value pairs into a string
+    @param {Object} map</p>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">stringify</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">map</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">hash</span><span class="p">,</span> <span class="nx">i</span><span class="p">;</span>
 
@@ -92,11 +90,10 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
             <span class="k">return</span> <span class="nx">hash</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;^\\&quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">sep</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
         <span class="p">},</span>
 
-        <span class="cm">/**</span>
-<span class="cm">         * hashchange</span>
-<span class="cm">         * The event handler. Parses the current hash into a map and</span>
-<span class="cm">         * trigger a deeplink event on the Deeplink instance</span>
-<span class="cm">         */</span>
+</pre></div>             </td>           </tr>                               <tr id="section-9">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-9">&#182;</a>               </div>               <h3>hashchange</h3>
+
+<p>The event handler. Parses the current hash into a map and
+trigger a deeplink event on the Deeplink instance</p>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">hashchange</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">hash</span><span class="p">,</span> <span class="nx">map</span><span class="p">;</span>
 
@@ -112,13 +109,12 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
             <span class="k">this</span><span class="p">.</span><span class="nx">triggering</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
         <span class="p">},</span>
 
-        <span class="cm">/**</span>
-<span class="cm">         * hashupdate</span>
-<span class="cm">         * Used to update the current hash with values from a map object</span>
-<span class="cm">         * @param {Object} map</span>
-<span class="cm">         * @param {Boolean} replace Should we replace all hash parameters</span>
-<span class="cm">         * @param {Boolean} fire Should we trigger the hashchange event</span>
-<span class="cm">         */</span>
+</pre></div>             </td>           </tr>                               <tr id="section-10">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-10">&#182;</a>               </div>               <h3>hashupdate</h3>
+
+<p>Used to update the current hash with values from a map object
+    @param {Object} map
+    @param {Boolean} replace Should we replace all hash parameters
+    @param {Boolean} fire Should we trigger the hashchange event</p>             </td>             <td class="code">               <div class="highlight"><pre>
         <span class="nx">hashupdate</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">map</span><span class="p">,</span> <span class="nx">replace</span><span class="p">,</span> <span class="nx">fire</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">hash</span><span class="p">,</span> <span class="nx">current</span><span class="p">;</span>
 
@@ -134,23 +130,22 @@ Licensed under the MIT license.</p>             </td>             <td class="cod
         <span class="p">}</span>
     <span class="p">};</span>
 
-</pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>constructor and prototype</p>             </td>             <td class="code">               <div class="highlight"><pre>
-    <span class="kd">var</span> <span class="nx">Deeplink</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</pre></div>             </td>           </tr>                               <tr id="section-11">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-11">&#182;</a>               </div>               <p><strong>constructor and prototype</strong></p>             </td>             <td class="code">               <div class="highlight"><pre>
+    <span class="kd">var</span> <span class="nx">Deeplink</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="cm">/* optional */</span> <span class="nx">eq</span><span class="p">,</span> <span class="nx">sep</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">init</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="nx">Deeplink</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">methods</span><span class="p">;</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     * setDelay</span>
-<span class="cm">     * Set the monitorDelay for monitorHash</span>
-<span class="cm">     * @param {Number} ms In milliseconds</span>
-<span class="cm">     */</span>
+</pre></div>             </td>           </tr>                               <tr id="section-12">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-12">&#182;</a>               </div>               <h3>setDelay</h3>
+
+<p>Set the monitorDelay for monitorHash
+    @param {Number} ms In milliseconds</p>             </td>             <td class="code">               <div class="highlight"><pre>
     <span class="nx">Deeplink</span><span class="p">.</span><span class="nx">setDelay</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ms</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">monitorDelay</span> <span class="o">=</span> <span class="nx">ms</span><span class="p">;</span>
     <span class="p">};</span>
 
-</pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>return a reference to the constructor</p>             </td>             <td class="code">               <div class="highlight"><pre>
+</pre></div>             </td>           </tr>                               <tr id="section-13">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-13">&#182;</a>               </div>               <p><strong>return a reference to the constructor</strong></p>             </td>             <td class="code">               <div class="highlight"><pre>
     <span class="k">return</span> <span class="nx">Deeplink</span><span class="p">;</span>
 
 <span class="p">}(</span><span class="k">this</span><span class="p">,</span> <span class="nx">jQuery</span><span class="p">));</span>
