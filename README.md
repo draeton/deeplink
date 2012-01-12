@@ -1,14 +1,14 @@
 ## deeplink
 
 [deeplink](http://draeton.github.com/deeplink/) is a small utility for working with deeplinks.
-The current version is `0.1.5`. Documentation is available
+The current version is `0.1.6`. Documentation is available
 [here](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html).
 
 
 ## Implementation
 
     <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/deeplink-0.1.5-min.js"></script>
+    <script src="js/deeplink-0.1.6-min.js"></script>
 
 
 ## Usage
@@ -21,6 +21,8 @@ You may also specify strings for the hash equality and separator values:
 
     var d = new Deeplink(":", ",");
 
+### .hashchange
+
 Every "hashchange" event triggers a "deeplink" event on the Deeplink instance. Any functions that need information from this event should be bound to the instance. These functions receive two arguments: a jQuery Event, and a data object with the data.hash string and a data.map key-value object:
 
     var d = new Deeplink();
@@ -32,11 +34,13 @@ Every "hashchange" event triggers a "deeplink" event on the Deeplink instance. A
 
     $(d).bind("deeplink", goto);
 
+### .hashupdate
+
 One other method to note is "hashupdate". If your code updates the state of the page in a way that needs to be referenced by a deeplink, you may pass a key-value object into this method to update the page URL. This method has three parameters:
 
-* map: The key-value object that updates the hash parameters
-* replace: A boolean that specifies whether the entire hash should be replaced
-* fire: A boolean that specifies whether this update should trigger a deeplink event on this instance
+* **map**: The key-value object that updates the hash parameters
+* **replace**: A boolean that specifies whether the entire hash should be replaced
+* **fire**: A boolean that specifies whether this update should trigger a deeplink event on this instance
 
 Sample usage:
 
@@ -50,6 +54,13 @@ Sample usage:
     };
 
     changePanel(4);
+
+### Deeplink.setDelay
+
+A final method to review is Deeplink.setDelay, which allows you to modify the timeout length between hash checks in
+browsers that don't support the window.onhashchange event:
+
+    Deeplink.setDelay(500); // in milliseconds
 
 
 ## Dependencies
