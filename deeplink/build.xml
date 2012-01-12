@@ -10,8 +10,8 @@
     <import file="../_tools/github/common-targets.xml"/>
 
 
-    <target name="-init" depends="-load.properties" description="Starting new build">
-        <echo>Starting new build</echo>
+    <target name="-init" depends="-load.properties" description="Initializing properties">
+        <echo>Initializing properties</echo>
 
         <filelist id="src.js" dir="${src.dir}">
             <file name="${repo}.js"/>
