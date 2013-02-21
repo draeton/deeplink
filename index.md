@@ -12,7 +12,7 @@ title: Deeplink - Easy-peasy deeplinking manager
 
 {% highlight html %}
 <script src="js/jquery-1.7.1.min.js"></script>
-<script src="js/deeplink-0.1.16-min.js"></script>
+<script src="js/deeplink-0.1.17-min.js"></script>
 {% endhighlight %}
 
 Documentation is available [here.](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html)
@@ -100,7 +100,7 @@ jQuery 1.7+
 
 ## Download
 
-The latest release, **0.1.16 is [available here](http://draeton.github.com/deeplink/deeplink/dist/deeplink-0.1.16.zip).**
+The latest release, **0.1.17 is [available here](http://draeton.github.com/deeplink/deeplink/dist/deeplink-0.1.17.zip).**
 
 You can download this project in either [zip](https://github.com/draeton/deeplink/zipball/master)
 or [tar](https://github.com/draeton/deeplink/tarball/master) formats.
