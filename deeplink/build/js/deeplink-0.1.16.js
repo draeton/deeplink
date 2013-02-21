@@ -2,7 +2,7 @@
 //
 // [http://draeton.github.com/deeplink](http://draeton.github.com/deeplink)
 //
-// Copyright 2012, Matthew Cobbs
+// Copyright 2013, Matthew Cobbs
 // MIT licensed
 //
 /*global jQuery*/
