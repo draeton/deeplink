@@ -1,14 +1,14 @@
 ## Deeplink
 
 [Deeplink](http://draeton.github.com/deeplink/) is a small utility for working with deeplinks.
-The current version is `0.1.15`. Documentation is available
+The current version is `0.1.16`. Documentation is available
 [here](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html).
 
 
 ## Implementation
 
     <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/deeplink-0.1.15-min.js"></script>
+    <script src="js/deeplink-0.1.16-min.js"></script>
 
 
 ## Usage
@@ -72,7 +72,7 @@ jQuery 1.7+
 
 (The MIT License)
 
-Copyright (c) 2012, <[Matthew Cobbs](mailto:draeton@gmail.com)>
+Copyright (c) 2013, <[Matthew Cobbs](mailto:draeton@gmail.com)>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
