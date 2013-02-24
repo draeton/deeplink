@@ -1,17 +1,17 @@
-[![build status](https://raw.github.com/draeton/deeplink/master/status.png)](http://draeton.github.com/deeplink/)
+[![build status](https://raw.github.com/draeton/deeplink/master/out/status.png)](http://draeton.github.com/deeplink/)
 
 [Deeplink](http://draeton.github.com/deeplink/)
 ==========
 
 Deeplink is a small utility for working with deeplinks.
-The current version is `0.1.23`. Documentation is available
+The current version is `0.1.24`. Documentation is available
 [here](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html).
 
 
 ## Implementation
 
     <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/deeplink-0.1.23-min.js"></script>
+    <script src="js/deeplink-0.1.24-min.js"></script>
 
 
 ## Usage

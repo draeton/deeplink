@@ -1,4 +1,4 @@
-[![build status](https://raw.github.com/draeton/deeplink/master/status.png)](http://draeton.github.com/deeplink/)
+[![build status](https://raw.github.com/draeton/deeplink/master/out/status.png)](http://draeton.github.com/deeplink/)
 
 [Deeplink](http://draeton.github.com/deeplink/)
 ==========
