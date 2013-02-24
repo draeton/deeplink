@@ -1,6 +1,9 @@
-## Deeplink
+[![build status](https://raw.github.com/draeton/deeplink/master/status.png)](http://draeton.github.com/deeplink/)
 
-[Deeplink](http://draeton.github.com/deeplink/) is a small utility for working with deeplinks.
+[Deeplink](http://draeton.github.com/deeplink/)
+==========
+
+Deeplink is a small utility for working with deeplinks.
 The current version is `@VERSION@`. Documentation is available
 [here](http://draeton.github.com/deeplink/deeplink/docs/deeplink.html).
 

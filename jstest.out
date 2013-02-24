@@ -1,0 +1,9 @@
+JS Test Results
+===============================================================================
+
+Running file:///c:/home/github/deeplink/tests/index.html...
+1. main: Dependencies (1, 0, 1)
+    1. Pass: Deeplink exists.
+Test passed.
+===============================================================================
+JS tests passed. 1 test passed.
