@@ -139,7 +139,7 @@ var Deeplink = (function (window, $) {
     // **constructor and prototype**
     var Deeplink = function (/* optional */ eq, sep) {
         this.init.apply(this, arguments);
-    }
+    };
 
     Deeplink.prototype = methods;
 
